@@ -1,3 +1,14 @@
 body {
-    min-width: 400px;
+    width: max-content;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.counter {
+    margin-left: 15px;
+}
+
+.counter__value {
+    font-size: 1.2em;
+    font-weight: bold;
 }

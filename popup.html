@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./style.css">
 	<title>Words counter</title>
 </head>
@@ -14,20 +14,22 @@
 	<main>
 		<div class="counter">
 			<div>
-				<span>На текущей странице найдено </span>
-				<span id="words-count">1</span>
-				<span> слов</span>
+				<span>На текущей странице найдено слов: </span>
+				<span id="words-count" class="counter__value">1</span>
 			</div>
 			<div>
-				<span>Уникальных слов:</span>
-				<span id="words-unic"></span>
+				<span>Уникальных слов: </span>
+				<span id="words-uniq" class="counter__value"></span>
 			</div>
 		</div>
 
 		<div class="graph">
-				
+			<h4>График используемости слов</h4>
+			<canvas id="myChart" width="300" height="300"></canvas>
 		</div>
 	</main>
+	<script src="./chart/Chart.min.js"></script>
+	<script type="module" src="./most1000words.js"></script>
 	<script type="module" src="./popup.js"></script>
 </body>
 </html>

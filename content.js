@@ -1,5 +1,6 @@
-const body = document.body;
-
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  sendResponse(10);
+  const bodyText = document.body.innerText;
+  const wordsCount = bodyText.match(/\b\w+\b/g);
+
+  sendResponse(wordsCount);
 });
